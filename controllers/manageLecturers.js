@@ -83,6 +83,7 @@ const manageLectureCtrl = {
       if (!updateLecData) {
         return res.status(404).json({ msg: "Lecturer not found" });
       }
+      return res.status(200).json({ msg: "Lecturer details updated" });
     } catch (error) {
       console.error(error);
       res.status(500).json({ msg: error.message });
@@ -98,7 +99,6 @@ const manageLectureCtrl = {
       if (!lec) return res.status(404).json({ msg: "No Lecturer" });
       console.log("Lecturer data Fetched");
       res.send(lec);
-      
     } catch (error) {
       console.error(error);
       res.status(500).json({ msg: error.message });

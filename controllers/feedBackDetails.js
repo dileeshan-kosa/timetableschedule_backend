@@ -28,6 +28,7 @@ const feedBackCtrl = {
         modulecode,
         modulename,
       });
+      console.log('newFeedbackData', newFeedbackData)
       await newFeedbackData.save();
 
       res.json({ msg: "Created" });
